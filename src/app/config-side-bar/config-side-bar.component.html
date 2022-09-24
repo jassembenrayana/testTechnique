@@ -1,1 +1,45 @@
-<p>config-side-bar works!</p>
+<div
+  class="col-md-3"
+  style="
+    background-color: #c8f8f8;
+    height: 100vh;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 1px #69acac;
+  "
+>
+  <div
+    style="
+      display: flex;
+      margin: 30px;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    <mat-icon color="primary">settings</mat-icon>
+    <b style="margin-left: 10px; font-size: larger">Configuration</b>
+  </div>
+  <div style="text-align: center">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input
+        matInput
+        [(ngModel)]="userSelected.nom"
+        [value]="userSelected.nom"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Prénom</mat-label>
+      <input
+        matInput
+        [(ngModel)]="userSelected.prenom"
+        [value]="userSelected.prenom"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nombre D'enfant</mat-label>
+      <input matInput disabled [value]="userSelected.nombre_enfants" />
+    </mat-form-field>
+  </div>
+</div>

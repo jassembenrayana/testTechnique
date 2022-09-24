@@ -1,0 +1,16 @@
+[{
+    "nom": "Blacky",
+    "prenom": "Alex",
+    "nombre_enfants": 5
+},
+{
+    "nom": "White",
+    "prenom": "Walter",
+    "nombre_enfants": 3
+},
+{
+    "nom": "Jessy",
+    "prenom": "Daruis",
+    "nombre_enfants": 8
+}
+]

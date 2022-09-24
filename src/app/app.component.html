@@ -1,5 +1,6 @@
-<p>app works!</p>
+<app-config-side-bar
+  *ngIf="isUserSelected"
+  [userSelected]="userSelected"
+></app-config-side-bar>
 
-<app-config-side-bar></app-config-side-bar>
-
-<app-user-card></app-user-card>
+<app-right-container (selectUser)="selectUser($event)"></app-right-container>

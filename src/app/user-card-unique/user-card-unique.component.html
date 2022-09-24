@@ -1,0 +1,44 @@
+<mat-card class="main">
+  <mat-card-content>Nom</mat-card-content>
+
+  <input disabled [value]="userinfo.nom" />
+
+  <mat-card-content>Prénom</mat-card-content>
+
+  <input disabled [value]="userinfo.prenom" />
+
+  <mat-card-content>Nombre D'enfant</mat-card-content>
+
+  <div style="display: flex; align-items: center">
+    <input disabled style="width: 40%" [value]="userinfo.nombre_enfants" />
+
+    <button
+      style="margin: 10px; background-color: rgb(194, 194, 194)"
+      mat-flat-button
+      color="basic"
+      (click)="addNombreEnfant(userinfo)"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <button
+      style="margin: 10px"
+      mat-raised-button
+      color="warn"
+      (click)="substractNombreEnfant(userinfo)"
+    >
+      <mat-icon>remove</mat-icon>
+    </button>
+  </div>
+  <mat-card-footer>
+    <button
+      (click)="deleteUser(userinfo)"
+      style="margin: 10px"
+      mat-raised-button
+      color="primary"
+      click
+    >
+      <mat-icon>delete</mat-icon> Delete
+    </button>
+  </mat-card-footer>
+</mat-card>

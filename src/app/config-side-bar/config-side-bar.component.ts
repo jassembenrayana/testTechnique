@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from '../entity/User';
 
 @Component({
   selector: 'app-config-side-bar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigSideBarComponent implements OnInit {
 
+  @Input() userSelected!: User;
+  
   constructor() { }
-
+  
   ngOnInit(): void {
   }
+
+  
 
 }

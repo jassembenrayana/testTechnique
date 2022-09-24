@@ -1,0 +1,8 @@
+.main {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 15px;
+    
+background: rgb(34,193,195);
+background: linear-gradient(0deg, rgb(39, 146, 148) 0%, rgba(211, 167, 131, 0.72) 71%);
+}

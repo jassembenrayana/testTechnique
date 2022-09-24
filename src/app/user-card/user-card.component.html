@@ -1,1 +1,61 @@
-<p>user-card works!</p>
+<div class="col-md-9" style="background-color: rgba(218, 218, 218, 0.712)">
+  <div
+    style="
+      background-color: #7393b3;
+      height: 15vh;
+      border-radius: 15px;
+      margin-left: 10px;
+      margin-top: 15px;
+      box-shadow: 1px 1px 5px 1px #0a0961;
+    "
+  >
+    <div
+      style="
+        font-family: Monospace;
+        font-size: 50px;
+        text-align: center;
+        color: #21318d;
+      "
+    >
+      List Of all the Users
+      <!--<button
+        style="background-color: rgb(87, 144, 190)"
+        mat-fab
+        aria-label="Example icon button with a delete icon"
+      >
+        <mat-icon>add</mat-icon>
+      </button>  -->
+      <button
+        (click)="LoadListUsersFromJson()"
+        style="margin-left: 20px; background-color: rgb(87, 144, 190)"
+        mat-fab
+        aria-label="Example icon button with a delete icon"
+      >
+        <mat-icon>refresh</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div
+    style="
+      background-color: #05ca88cb;
+      height: 75vh;
+      border-radius: 15px;
+      margin-left: 10px;
+      margin-top: 30px;
+      box-shadow: 1px 1px 5px 1px #033b16;
+      overflow-y: auto;
+    "
+  >
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
+      <app-user-card-unique
+        *ngFor="let user of Users"
+        [userinfo]="user"
+        (delete_User_Event)="deleteUserEvent($event)"
+        (addNombreEnfantEvent)="addNb($event)"
+        (substractNombreEnfantEvent)="RemoveNb($event)"
+        (click)="onSelect(user)"
+      ></app-user-card-unique>
+    </div>
+  </div>
+</div>
